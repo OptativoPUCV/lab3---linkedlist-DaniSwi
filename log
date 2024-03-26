@@ -64,3 +64,14 @@ Tue 26 Mar 2024 10:38:07 PM UTC:
  tests:  10|2
 total_score: 45/70
 3184221
+Tue 26 Mar 2024 10:38:44 PM UTC: 
+ list.c | 10 ----------
+ 1 file changed, 10 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:78:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   78 |   Node *aux = list->head;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a712253
