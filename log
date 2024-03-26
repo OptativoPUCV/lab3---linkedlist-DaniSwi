@@ -10,3 +10,9 @@ list.c:31:8: note: previous definition of ‘createList’ with type ‘List *(v
       |        ^~~~~~~~~~
 Compilation failed
 6e22992
+Tue 26 Mar 2024 08:48:15 PM UTC: 
+ list.c | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+ tests:  1|5
+total_score: 10/70
+a55db85
