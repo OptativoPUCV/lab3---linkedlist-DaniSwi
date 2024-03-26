@@ -1,0 +1,12 @@
+Tue 26 Mar 2024 08:47:48 PM UTC: 
+ list.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:
+list.c:82:7: error: redefinition of ‘createList’
+   82 | List *createList() {
+      |       ^~~~~~~~~~
+list.c:31:8: note: previous definition of ‘createList’ with type ‘List *(void)’ {aka ‘struct List *(void)’}
+   31 | List * createList() {
+      |        ^~~~~~~~~~
+Compilation failed
+6e22992
