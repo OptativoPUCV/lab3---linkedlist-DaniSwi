@@ -19,8 +19,8 @@ struct List {
 
 typedef List List;
 
-Node * createNode(void * data) {
-    Node * new = (Node *)malloc(sizeof(Node));
+Node *createNode(void * data) {
+    Node *new = (Node *)malloc(sizeof(Node));
     assert(new != NULL);
     new->data = data;
     new->prev = NULL;
@@ -68,7 +68,12 @@ void *prevList(List * list) { //La segunda función retorna el dato del nodo ant
   return list->current->data;
 }
 
-void pushFront(List * list, void * data) {
+void pushFront(List *list, void *data) {
+  Node *newNode = createNode(data);
+  newNode->next = list->head;
+  if(list->head)
+      list->head->prev = newNode;
+  list->head = newNode;
 }
 
 void pushBack(List * list, void * data) {
