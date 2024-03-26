@@ -71,8 +71,10 @@ void *prevList(List * list) { //La segunda función retorna el dato del nodo ant
 void pushFront(List *list, void *data) {
   Node *newNode = createNode(data);
   newNode->next = list->head;
-  if(list->head)
-      list->head->prev = newNode;
+  if(list->head) {
+    list->head->prev = newNode;
+    newNode->next = list->head;
+  }
   list->head = newNode;
 }
 
